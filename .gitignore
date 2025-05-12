@@ -1,0 +1,12 @@
+# created by virtualenv automatically
+# Ignore everything by default
+*
+
+# Dont inore the following files/folders
+!.gitignore
+!requirements.txt
+!*.py
+!tests
+!
+
+
