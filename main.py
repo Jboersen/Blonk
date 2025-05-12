@@ -1,5 +1,4 @@
 import faostat
-import logging
 from extract import extract_from_faostat
 from transform import average_over_years
 from load import write_dfs_to_excel
@@ -14,9 +13,6 @@ Steps:
 """
 
 def main():
-    logging.basicConfig(level=logging.INFO, filename='process.log', filemode='w',
-                        format='%(asctime)s - %(levelname)s - %(message)s')
-
     # Define the first search conditions
     database = 'QCL'
     countries = ["Brazil", "China", "India", "United States of America", "Russian Federation"]
@@ -52,7 +48,7 @@ def main():
         'Averaged_pesticide_data' : pesticide_df_averaged
     }
 
-    write_dfs_to_excel(df_dict, path='output/assesment.xlsx')
+    write_dfs_to_excel(df_dict, path='output/assessment.xlsx')
 
 if __name__ == '__main__':
     main()
